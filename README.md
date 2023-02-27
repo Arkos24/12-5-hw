@@ -29,3 +29,8 @@ WHERE date(p.payment_date) = '2005-07-30' AND p.payment_date = r.rental_date AND
 GROUP BY name
 
 На выходе получаем тоже самое, но значительно быстрее
+
+
+Доработка:
+Добавил индекс по payment_date из таблицы payment и составной индекс на фамилию и имя из customer
+![image](https://user-images.githubusercontent.com/114281054/221524068-e4f596be-4822-42a0-8cb3-578980521340.png)
